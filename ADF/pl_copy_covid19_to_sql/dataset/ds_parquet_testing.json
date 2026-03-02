@@ -1,0 +1,73 @@
+{
+    "name": "ds_parquet_testing",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "ls_adls_covid19",
+            "type": "LinkedServiceReference"
+        },
+        "folder": {
+            "name": "processed_Source"
+        },
+        "annotations": [],
+        "type": "Parquet",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "fileName": "part-00000-tid-2373182277900449614-43a0c8f7-d664-4ce3-8cdd-b9df4098027f-292-1.c000.snappy.parquet",
+                "folderPath": "testing",
+                "fileSystem": "processed"
+            },
+            "compressionCodec": "snappy"
+        },
+        "schema": [
+            {
+                "name": "country",
+                "type": "UTF8"
+            },
+            {
+                "name": "country_code",
+                "type": "UTF8"
+            },
+            {
+                "name": "year_week",
+                "type": "UTF8"
+            },
+            {
+                "name": "level",
+                "type": "UTF8"
+            },
+            {
+                "name": "region",
+                "type": "UTF8"
+            },
+            {
+                "name": "region_name",
+                "type": "UTF8"
+            },
+            {
+                "name": "new_cases",
+                "type": "UTF8"
+            },
+            {
+                "name": "tests_done",
+                "type": "UTF8"
+            },
+            {
+                "name": "population",
+                "type": "INT_32"
+            },
+            {
+                "name": "testing_rate",
+                "type": "UTF8"
+            },
+            {
+                "name": "positivity_rate",
+                "type": "UTF8"
+            },
+            {
+                "name": "testing_data_source",
+                "type": "UTF8"
+            }
+        ]
+    }
+}

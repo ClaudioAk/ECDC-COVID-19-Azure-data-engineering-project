@@ -1,0 +1,45 @@
+{
+    "name": "ds_sql_hospital",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "ls_sql_covid19",
+            "type": "LinkedServiceReference"
+        },
+        "folder": {
+            "name": "Processed Sink"
+        },
+        "annotations": [],
+        "type": "AzureSqlTable",
+        "schema": [
+            {
+                "name": "country",
+                "type": "varchar"
+            },
+            {
+                "name": "indicator",
+                "type": "varchar"
+            },
+            {
+                "name": "date",
+                "type": "date"
+            },
+            {
+                "name": "year_week",
+                "type": "varchar"
+            },
+            {
+                "name": "value",
+                "type": "float",
+                "precision": 15
+            },
+            {
+                "name": "source",
+                "type": "varchar"
+            }
+        ],
+        "typeProperties": {
+            "schema": "dbo",
+            "table": "hospital_admissions"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "name": "ds_sql_population",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "ls_sql_covid19",
+            "type": "LinkedServiceReference"
+        },
+        "folder": {
+            "name": "Processed Sink"
+        },
+        "annotations": [],
+        "type": "AzureSqlTable",
+        "schema": [
+            {
+                "name": "country_code",
+                "type": "varchar"
+            },
+            {
+                "name": "age_group",
+                "type": "varchar"
+            },
+            {
+                "name": "population_2019",
+                "type": "bigint",
+                "precision": 19
+            }
+        ],
+        "typeProperties": {
+            "schema": "dbo",
+            "table": "population"
+        }
+    }
+}

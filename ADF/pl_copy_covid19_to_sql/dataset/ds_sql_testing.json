@@ -1,0 +1,73 @@
+{
+    "name": "ds_sql_testing",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "ls_sql_covid19",
+            "type": "LinkedServiceReference"
+        },
+        "folder": {
+            "name": "Processed Sink"
+        },
+        "annotations": [],
+        "type": "AzureSqlTable",
+        "schema": [
+            {
+                "name": "country",
+                "type": "varchar"
+            },
+            {
+                "name": "country_code",
+                "type": "varchar"
+            },
+            {
+                "name": "year_week",
+                "type": "varchar"
+            },
+            {
+                "name": "level",
+                "type": "varchar"
+            },
+            {
+                "name": "region",
+                "type": "varchar"
+            },
+            {
+                "name": "region_name",
+                "type": "varchar"
+            },
+            {
+                "name": "new_cases",
+                "type": "float",
+                "precision": 15
+            },
+            {
+                "name": "tests_done",
+                "type": "float",
+                "precision": 15
+            },
+            {
+                "name": "population",
+                "type": "int",
+                "precision": 10
+            },
+            {
+                "name": "testing_rate",
+                "type": "float",
+                "precision": 15
+            },
+            {
+                "name": "positivity_rate",
+                "type": "float",
+                "precision": 15
+            },
+            {
+                "name": "testing_data_source",
+                "type": "varchar"
+            }
+        ],
+        "typeProperties": {
+            "schema": "dbo",
+            "table": "testing"
+        }
+    }
+}

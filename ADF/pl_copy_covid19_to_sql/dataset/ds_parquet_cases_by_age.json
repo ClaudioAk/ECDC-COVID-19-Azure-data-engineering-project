@@ -1,0 +1,57 @@
+{
+    "name": "ds_parquet_cases_by_age",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "ls_adls_covid19",
+            "type": "LinkedServiceReference"
+        },
+        "folder": {
+            "name": "processed_Source"
+        },
+        "annotations": [],
+        "type": "Parquet",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "fileName": "part-00000-tid-8069779022504580803-fcaf7446-7c81-4fad-b2eb-fac4c91fbdcf-256-1.c000.snappy.parquet",
+                "folderPath": "cases_by_age",
+                "fileSystem": "processed"
+            },
+            "compressionCodec": "snappy"
+        },
+        "schema": [
+            {
+                "name": "country",
+                "type": "UTF8"
+            },
+            {
+                "name": "country_code",
+                "type": "UTF8"
+            },
+            {
+                "name": "year_week",
+                "type": "UTF8"
+            },
+            {
+                "name": "age_group",
+                "type": "UTF8"
+            },
+            {
+                "name": "new_cases",
+                "type": "UTF8"
+            },
+            {
+                "name": "population",
+                "type": "INT_32"
+            },
+            {
+                "name": "rate_14_day_per_100k",
+                "type": "UTF8"
+            },
+            {
+                "name": "source",
+                "type": "UTF8"
+            }
+        ]
+    }
+}

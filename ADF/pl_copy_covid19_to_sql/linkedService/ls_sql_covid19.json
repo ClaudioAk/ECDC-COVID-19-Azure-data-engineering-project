@@ -1,0 +1,16 @@
+{
+    "name": "ls_sql_covid19",
+    "type": "Microsoft.DataFactory/factories/linkedservices",
+    "properties": {
+        "annotations": [],
+        "type": "AzureSqlDatabase",
+        "typeProperties": {
+            "server": "sql-covid19-de-server.database.windows.net",
+            "database": "covid19db",
+            "encrypt": "mandatory",
+            "trustServerCertificate": false,
+            "authenticationType": "SQL",
+            "userName": "Cladmin"
+            
+    }
+}

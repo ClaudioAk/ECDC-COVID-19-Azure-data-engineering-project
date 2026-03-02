@@ -1,0 +1,12 @@
+{
+    "name": "ls_blob_covid19",
+    "type": "Microsoft.DataFactory/factories/linkedservices",
+    "properties": {
+        "annotations": [],
+        "type": "AzureBlobStorage",
+        "typeProperties": {
+            "connectionString": "DefaultEndpointsProtocol=https;AccountName=blobcovid19de;EndpointSuffix=core.windows.net;"
+            
+        }
+    }
+}

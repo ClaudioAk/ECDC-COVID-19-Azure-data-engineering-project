@@ -1,0 +1,37 @@
+{
+    "name": "ds_parquet_population",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "ls_adls_covid19",
+            "type": "LinkedServiceReference"
+        },
+        "folder": {
+            "name": "processed_Source"
+        },
+        "annotations": [],
+        "type": "Parquet",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "fileName": "part-00000-tid-8735490624696439441-1dd5ee84-488e-46df-80b0-7cc4385c893b-311-1.c000.snappy.parquet",
+                "folderPath": "population",
+                "fileSystem": "processed"
+            },
+            "compressionCodec": "snappy"
+        },
+        "schema": [
+            {
+                "name": "country_code",
+                "type": "UTF8"
+            },
+            {
+                "name": "age_group",
+                "type": "UTF8"
+            },
+            {
+                "name": "population_2019",
+                "type": "UTF8"
+            }
+        ]
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "name": "sql_cases_deaths",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "ls_sql_covid19",
+            "type": "LinkedServiceReference"
+        },
+        "folder": {
+            "name": "Processed Sink"
+        },
+        "annotations": [],
+        "type": "AzureSqlTable",
+        "schema": [
+            {
+                "name": "Reporting_date",
+                "type": "date"
+            },
+            {
+                "name": "day",
+                "type": "int",
+                "precision": 10
+            },
+            {
+                "name": "month",
+                "type": "int",
+                "precision": 10
+            },
+            {
+                "name": "year",
+                "type": "int",
+                "precision": 10
+            },
+            {
+                "name": "Confirmed_cases",
+                "type": "int",
+                "precision": 10
+            },
+            {
+                "name": "deaths",
+                "type": "int",
+                "precision": 10
+            },
+            {
+                "name": "Country",
+                "type": "varchar"
+            },
+            {
+                "name": "country_code_2_digit",
+                "type": "varchar"
+            },
+            {
+                "name": "country_code_3_digit",
+                "type": "varchar"
+            },
+            {
+                "name": "population",
+                "type": "int",
+                "precision": 10
+            },
+            {
+                "name": "continent",
+                "type": "varchar"
+            }
+        ],
+        "typeProperties": {
+            "schema": "dbo",
+            "table": "cases_deaths"
+        }
+    }
+}

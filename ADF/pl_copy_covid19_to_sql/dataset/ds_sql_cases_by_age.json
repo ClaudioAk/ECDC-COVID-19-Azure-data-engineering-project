@@ -1,0 +1,55 @@
+{
+    "name": "ds_sql_cases_by_age",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "ls_sql_covid19",
+            "type": "LinkedServiceReference"
+        },
+        "folder": {
+            "name": "Processed Sink"
+        },
+        "annotations": [],
+        "type": "AzureSqlTable",
+        "schema": [
+            {
+                "name": "country",
+                "type": "varchar"
+            },
+            {
+                "name": "country_code",
+                "type": "varchar"
+            },
+            {
+                "name": "year_week",
+                "type": "varchar"
+            },
+            {
+                "name": "age_group",
+                "type": "varchar"
+            },
+            {
+                "name": "new_cases",
+                "type": "float",
+                "precision": 15
+            },
+            {
+                "name": "population",
+                "type": "int",
+                "precision": 10
+            },
+            {
+                "name": "rate_14_day_per_100k",
+                "type": "float",
+                "precision": 15
+            },
+            {
+                "name": "source",
+                "type": "varchar"
+            }
+        ],
+        "typeProperties": {
+            "schema": "dbo",
+            "table": "cases_by_age"
+        }
+    }
+}

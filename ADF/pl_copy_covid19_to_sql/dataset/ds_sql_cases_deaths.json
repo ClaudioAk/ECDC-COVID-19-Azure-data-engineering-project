@@ -1,0 +1,69 @@
+{
+    "name": "ds_sql_cases_deaths",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "ls_adls_covid19",
+            "type": "LinkedServiceReference"
+        },
+        "folder": {
+            "name": "processed_Source"
+        },
+        "annotations": [],
+        "type": "Parquet",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "fileName": "part-00000-tid-3059185345328192273-83c08e0b-3b3b-4d9b-be3e-71fcee3df9d2-271-1.c000.snappy.parquet",
+                "folderPath": "cases_deaths",
+                "fileSystem": "processed"
+            },
+            "compressionCodec": "snappy"
+        },
+        "schema": [
+            {
+                "name": "Reporting_date",
+                "type": "DATE"
+            },
+            {
+                "name": "day",
+                "type": "INT_32"
+            },
+            {
+                "name": "month",
+                "type": "INT_32"
+            },
+            {
+                "name": "year",
+                "type": "INT_32"
+            },
+            {
+                "name": "Confirmed_cases",
+                "type": "INT_32"
+            },
+            {
+                "name": "deaths",
+                "type": "INT_32"
+            },
+            {
+                "name": "Country",
+                "type": "UTF8"
+            },
+            {
+                "name": "country_code_2_digit",
+                "type": "UTF8"
+            },
+            {
+                "name": "country_code_3_digit",
+                "type": "UTF8"
+            },
+            {
+                "name": "population",
+                "type": "INT_32"
+            },
+            {
+                "name": "continent",
+                "type": "UTF8"
+            }
+        ]
+    }
+}

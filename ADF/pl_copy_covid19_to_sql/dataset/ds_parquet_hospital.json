@@ -1,0 +1,49 @@
+{
+    "name": "ds_parquet_hospital",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "ls_adls_covid19",
+            "type": "LinkedServiceReference"
+        },
+        "folder": {
+            "name": "processed_Source"
+        },
+        "annotations": [],
+        "type": "Parquet",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "fileName": "part-00000-tid-1882424659135990901-c2eec0e3-8725-4b79-aa43-c036af3be89d-303-1.c000.snappy.parquet",
+                "folderPath": "hospital_admissions",
+                "fileSystem": "processed"
+            },
+            "compressionCodec": "snappy"
+        },
+        "schema": [
+            {
+                "name": "country",
+                "type": "UTF8"
+            },
+            {
+                "name": "indicator",
+                "type": "UTF8"
+            },
+            {
+                "name": "date",
+                "type": "DATE"
+            },
+            {
+                "name": "year_week",
+                "type": "UTF8"
+            },
+            {
+                "name": "value",
+                "type": "DOUBLE"
+            },
+            {
+                "name": "source",
+                "type": "UTF8"
+            }
+        ]
+    }
+}
