@@ -8,7 +8,7 @@ The solution follows common modeling best practices (dimension + fact style) to 
 
 ## 🏗️ Architecture Overview
 
-<img width="1376" height="768" alt="generated-image" src="https://github.com/user-attachments/assets/84ff0a55-623e-4115-8813-5021af5a6586" />
+<img width="1376" height="768" alt="generated-image" src="https://github.com/user-attachments/assets/eb88413b-e9f6-40da-982b-9f49092de356" />
 
 ### 🔁 High-level flow
 - 🌐 Ingest COVID-19 datasets from public sources (CSV/TSV) into Azure storage.
